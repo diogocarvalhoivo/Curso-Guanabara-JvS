@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Troco</title>
+    <style>
+        #but{
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálculo do troco</h1>
+    <input type="button" value="Comprar produto" id="but" onclick="clicar()">
+
+    <script>
+        function clicar(){
+            produto=window.prompt('Qual produto está a comprar?')
+            mercado=window.prompt('Qual o valor do produto?')
+            valor=window.prompt('Quanto irá pagar?')
+            mercado=Number(mercado)
+            valor=Number(valor)
+            troco=valor-mercado
+            window.alert(`Você comprou o produto: ${produto} que custou ${mercado.toLocaleString('pt', {style: 'currency', currency: 'EUR'})}.\nDeu ${valor.toLocaleString('pt', {style: 'currency', currency: 'EUR'})} em dinheiro e vai receber ${troco.toLocaleString('pt', {style: 'currency', currency: 'EUR'})}`)
+        }
+    </script>
+</body>
+</html>
