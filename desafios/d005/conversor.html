@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medidas</title>
+    <style>
+        #but{
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="tit">Conversor de medidas</h1>
+    <input type="button" value="Converter" id="but" onclick="clicar()">
+    <p>Clique no botão para inicar</p>
+    <script>
+        function clicar(){
+            m=window.prompt('Digite uma distância em metros: ')
+            Number(m)
+            window.document.write(`${m/1000} quilômetros (Km) <br>`)
+            window.document.write(`${m/100} hectômetros (Hm)<br>`)
+            window.document.write(`${m/10} decâmetros (Dam)<br>`)
+            window.document.write(`${m*10} decímetros (dm)<br>`)
+            window.document.write(`${m*100} centímetros (cm)<br>`)
+            window.document.write(`${m*1000} milímetros (mm)<br>`)
+        }
+    </script>
+</body>
+</html>

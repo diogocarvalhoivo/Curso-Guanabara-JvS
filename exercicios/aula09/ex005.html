@@ -15,11 +15,11 @@
 <body>
     <h1>DOM</h1>
     <p>O DOM (Document Object Model) é a representação de dados dos objetos que compõem a estrutura e o conteúdo de um documento na Web. O Document Object Model (DOM) é uma interface de programação para os documentos HTML e XML. Representa a página de forma que os programas possam alterar a estrutura do documento, alterar o estilo e conteúdo. O DOM representa o documento com nós e objetos, dessa forma, as linguagens de programação podem se conectar à página.</p>
-    <p>Aqui vai o <strong>resultado</strong></p>
+    <h1>Aqui vai o resultado</h1>
     <p>Aprendendo a usaro <strong>DOM</strong> em JavaScript.</p>
     <div id="msg">Clique em mim</div><br>
     <script>
-        var p1 = window.document.getElementsByTagName('p')[1]
+        var p1 = window.document.getElementsByTagName('h1')[1]
         p1.style.color='black'
         window.document.write('No segundo parágrafo (p1) está escrito assim: '+p1.innerHTML)
         var d = window.document.querySelector('div#msg')
