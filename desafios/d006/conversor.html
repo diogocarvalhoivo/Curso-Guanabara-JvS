@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperaturas</title>
+    <style>
+        #but{
+            padding: 15px;
+        }
+
+        #res{
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="tit">Conversor de Temperaturas</h1>
+    <input type="button" value="Converter" id="but" onclick="clicar()">
+    <div id="res">
+        Clique no botão acima para inicar
+    </div>
+    <script>
+        function clicar(){
+            m=window.prompt('Digite uma tempertura em ºC (Celsius): ')
+            m=Number(m)
+            mq= m + 273.15
+            mh= m + 60.56
+            res.innerHTML = `
+                <h1>A temperatura de ${m.toString().replace('.',',')}ºC, corresponde a:</h1> 
+                <p>${mq.toFixed(2).replace('.',',')}ºK (Kelvin) </p>
+                <p>${mh.toFixed(2).replace('.',',')}ºF (Fahrenheit)</p>
+            `
+        }
+    </script>
+</body>
+</html>

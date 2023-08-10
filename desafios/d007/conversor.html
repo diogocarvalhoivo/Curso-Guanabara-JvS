@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de R$ -> US$</title>
+    <style>
+        #but{
+            padding: 15px;
+        }
+
+        #res{
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body onload="alerta()">
+    <h1 id="tit">Conversor de R$ &rarr; US$</h1>
+    <input type="button" value="Converter" id="but" onclick="clicar()">
+    <div id="res">
+        Clique no botão acima para inicar
+    </div>
+    <script>
+        function alerta(){
+            cota=window.prompt("Quantos reais vale 1 dólar?")
+            cota=Number(cota)
+        }
+
+        function clicar(){
+            real=window.prompt("Quantos reais você tem?")
+            real=Number(real)
+            dol=real/cota
+            res.innerHTML = `
+                <h1>Você consegue comprar ${dol.toLocaleString(`pt`, {style: `currency`, currency: `USD`})} dólares.</h1> 
+            `
+        }
+    </script>
+</body>
+</html>
