@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: rgb(70, 142, 236);
+    font: normal 15pt Arial;
+    height: vh;
+    width: vw;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+main{
+    width: 50%;
+    margin: 15px auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.449);
+}
+
+#ini{
+    margin-bottom: 10px;
+}
+
+#fim{
+    margin-bottom: 10px;
+}
+
+#passo{
+    margin-bottom: 10px;
+}
+
+#but{
+    margin-bottom: 10px;
+    padding: 2px;
+}
+
+footer{
+    text-align: center;
+    font-style: italic;
+    color: white;
+}
