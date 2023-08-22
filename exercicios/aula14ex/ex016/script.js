@@ -4,25 +4,23 @@ function clicar(){
     let passo = document.querySelector('#passo')
     let res = document.querySelector('#res')
     
+    i = Number(inicio.value)
+    f = Number(fim.value)
+    p = Number(passo.value)
 
-    inicio = Number(inicio.value)
-    fim = Number(fim.value)
-    passo = Number(passo.value)
-    let msg = `${inicio}`
-
-    if(inicio > fim){ 
-        while(inicio - passo > fim) { /*Contagem descrescente */
-            inter = ` &#128073; ${inicio - passo}`
-            msg = msg + inter 
-            inicio -= passo
-        }
-        res.innerHTML = `${msg} &#127987;`
+    if (i == 0 || f == 0 || p <= 0){
+        res.innerHTML = `Impossível contar` 
     } else {
-        while(inicio + passo <= fim) { /*Contagem crescente */
-            inter = ` &#128073; ${inicio + passo}`
-            msg = msg + inter 
-            inicio += passo
+        res.innerHTML = `Contando: `
+        if (i < f){ 
+            for (let c = i; c <= f; c += p){
+                res.innerHTML += `${c} \u{1F449}`
+            }
+        } else {
+            for (let c = i; c >= f; c -= p) {
+                res.innerHTML += `${c} \u{1F449}`
+            }
         }
-        res.innerHTML = `${msg} &#127987;`
+        res.innerHTML += `&#127987;`
     }
 }
