@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #468EEC;
+    font: normal 15pt Arial;
+    height: vh;
+    width: vw;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+
+main{
+    background-color: white;
+    border-radius: 10px;
+    width: 50%;
+    margin: 15px auto;
+    padding: 15px;
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.516);
+}
+
+footer{
+    text-align: center;
+    color: white;
+    font-style: italic;
+}
