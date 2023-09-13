@@ -25,6 +25,13 @@ main{
     box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.516);
 }
 
+#selquadro{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 150px;
+}
+
+
 footer{
     text-align: center;
     color: white;
