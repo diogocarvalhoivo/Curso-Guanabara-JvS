@@ -2,29 +2,27 @@ let vetor =[]
 let res = document.querySelector('#res')
 
 function adicionar(){
-    let num = Number(document.querySelector('#num').value)
+    let num = document.querySelector('#num')
     let i=0
-    if (num>100 || num<1){
+    if (Number(num.value)>100 || Number(num.value)<1){
         
     } else{
         for (let c=0; c<vetor.length; c++){
-            if (vetor[c]==num){
+            if (vetor[c]==Number(num.value)){
                 i = 1
             }
         }
         if (i==1){
             window.alert(`Número já usado`)
         } else{
-            vetor.push(num)
+            vetor.push(Number(num.value))
             let tab = document.querySelector('#selquadro')
             let item = document.createElement('option') /*cria um option*/
-            item.text = `Valor ${num} adicionado` /*informa o q será escrito no option*/
-            item.value = `${num}` /*valores a serem gravados para enviar para um banco de dados*/
+            item.text = `Valor ${Number(num.value)} adicionado` /*informa o q será escrito no option*/
             tab.appendChild(item) /*cria o option dentro de tab, que é referente ao elemento select do html */
+            num.value = '' /*APAGAR O INPUT*/
+            num.focus() /*FOCAR NA CAIXA NO INPUT*/
             res.innerHTML= ``
-            if (res.innerHTML != ``){
-                res.innerHTML= ``
-            }
         }  
     }      
 }
@@ -41,9 +39,9 @@ function finalizar(){
         soma+=vetor[c]
     }
     let media = soma/vetor.length
-    res.innerHTML =`Ao todo, temos ${vetor.length} números cadastrados.<br>
-    O maior valor informado foi ${maior}<br>
-    O menor valor informado foi ${menor}<br>
-    Somando todos o valores, temos ${soma}<br>
-    A média dos valores digitados é ${media}.`
+    res.innerHTML =`<p>Ao todo, temos ${vetor.length} números cadastrados.</p>`
+    res.innerHTML +=`<p>O maior valor informado foi ${maior}</p>`
+    res.innerHTML +=`<p>O menor valor informado foi ${menor}</p>`
+    res.innerHTML +=`<p>Somando todos o valores, temos ${soma}</p>`
+    res.innerHTML +=`<p>A média dos valores digitados é ${media}.</p>`
 }
